@@ -13,21 +13,6 @@ The experiment is divided into two practical parts:
 
 - **Part-A:** Proxmox VE Type-1 Hypervisor
 - **Part-B:** VMware Workstation Type-2 Hypervisor
-
-![Performance Dashboard](images/charts/performance-dashboard.png)
-
-## Executive Summary
-
-Both virtual machines were configured with Ubuntu and tested using the same CPU benchmark command:
-
-```bash
-sysbench cpu --cpu-max-prime=20000 run
-```
-
-The benchmark shows that **Proxmox VE Type-1 virtualization produced higher CPU throughput and lower latency** than VMware Workstation Type-2 virtualization in this lab setup.
-
-> **Key result:** Proxmox VE reached **1749.16 events/sec**, while VMware Workstation reached **1119.03 events/sec**. That is a **56.31% throughput advantage** for the Type-1 hypervisor.
-
 ## Table of Contents
 
 1. [Project Objectives](#project-objectives)
@@ -172,6 +157,19 @@ The Type-2 VMware Workstation environment is easier to install on a personal com
 
 The experiment demonstrates that **Type-1 hypervisors are better suited for production-like cloud workloads** where throughput, consistency, and low-latency execution matter. **Type-2 hypervisors are still useful for learning, development, testing, and local lab practice**, but they usually have more overhead because they run on top of a host operating system.
 
+![Performance Dashboard](images/charts/performance-dashboard.png)
+
+## Executive Summary
+
+Both virtual machines were configured with Ubuntu and tested using the same CPU benchmark command:
+
+```bash
+sysbench cpu --cpu-max-prime=20000 run
+```
+
+The benchmark shows that **Proxmox VE Type-1 virtualization produced higher CPU throughput and lower latency** than VMware Workstation Type-2 virtualization in this lab setup.
+
+> **Key result:** Proxmox VE reached **1749.16 events/sec**, while VMware Workstation reached **1119.03 events/sec**. That is a **56.31% throughput advantage** for the Type-1 hypervisor.
 ## Repository Structure
 
 ```text
