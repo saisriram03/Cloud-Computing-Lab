@@ -1,0 +1,18 @@
+[
+  {
+    "id": 101,
+    "name": "Cloud Lab Notebook",
+    "price": 120
+  },
+  {
+    "id": 102,
+    "name": "Docker Practice Kit",
+    "price": 450
+  },
+  {
+    "id": 103,
+    "name": "Kubernetes Quick Guide",
+    "price": 300
+  }
+]
+

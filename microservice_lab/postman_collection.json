@@ -1,0 +1,44 @@
+{
+  "info": {
+    "name": "Microservice Lab",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Gateway Health",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/health"
+      }
+    },
+    {
+      "name": "Get Users",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/users"
+      }
+    },
+    {
+      "name": "Get Products",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/products"
+      }
+    },
+    {
+      "name": "Get Orders",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/orders"
+      }
+    },
+    {
+      "name": "Get Order Summary",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/orders/summary"
+      }
+    }
+  ]
+}
+

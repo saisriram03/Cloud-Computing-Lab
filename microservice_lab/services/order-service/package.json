@@ -1,0 +1,14 @@
+{
+  "name": "order-service",
+  "version": "1.0.0",
+  "description": "Order microservice for the microservice lab",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.3"
+  }
+}
+
