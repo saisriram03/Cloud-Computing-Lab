@@ -30,158 +30,21 @@
 This repository contains the complete practical work of the **Cloud Computing Laboratory**.
 
 The experiments are organized into three major sections:
-
 ```text
 ☁️ CLOUD COMPUTING LAB
-│
-├── 🟦 EXP-1
-│   │
-│   ├── 🖥️ PART-A — PROXMOX VE
-│   │   ├── Proxmox Dashboard
-│   │   ├── VM Configuration
-│   │   ├── VM Running
-│   │   ├── Ubuntu Console
-│   │   ├── System Configuration
-│   │   ├── Sysbench Benchmark
-│   │   └── Resource Monitoring
-│   │
-│   ├── 🖥️ PART-B — VMWARE WORKSTATION
-│   │   ├── New VM Wizard
-│   │   ├── Disk Configuration
-│   │   ├── RAM Configuration
-│   │   ├── CPU Configuration
-│   │   ├── Ubuntu VM
-│   │   ├── hostnamectl
-│   │   ├── lscpu
-│   │   ├── free -h
-│   │   ├── df -h
-│   │   ├── top
-│   │   ├── Sysbench Installation
-│   │   ├── Sysbench Benchmark
-│   │   └── Final Comparison
-│   │
-│   ├── 📊 PERFORMANCE ANALYSIS
-│   │   ├── Performance Dashboard
-│   │   ├── Throughput Comparison
-│   │   ├── Events Comparison
-│   │   └── Latency Profile
-│   │
-│   ├── 📸 SCREENSHOTS
-│   ├── 📝 LAB REPORT
-│   └── 🐍 CHART GENERATION
-│
-├── 🟪 EXPERIMENT 2
-│   │
-│   ├── 🐍 PART-A — PYTHON FLASK
-│   │   ├── app.py
-│   │   └── requirements.txt
-│   │
-│   ├── 🐳 PART-B — DOCKER
-│   │   ├── Dockerfile
-│   │   ├── Docker Image
-│   │   └── Docker Container
-│   │
-│   ├── ⚙️ PART-C — DOCKER EXECUTION
-│   │   ├── Docker Version
-│   │   ├── Hello World
-│   │   ├── Image Build
-│   │   ├── Image Verification
-│   │   ├── Container Run
-│   │   ├── Container Verification
-│   │   └── Browser Output
-│   │
-│   ├── 📸 PART-D — ORIGINAL SCREENSHOTS
-│   │   ├── Docker Version
-│   │   ├── Hello World
-│   │   ├── Project Directory
-│   │   ├── Flask Application
-│   │   ├── Requirements
-│   │   ├── Dockerfile
-│   │   ├── Project Files
-│   │   ├── Image Build
-│   │   ├── Image Verification
-│   │   ├── Container Status
-│   │   ├── Container Running
-│   │   └── Browser Output
-│   │
-│   ├── 🎨 PART-E — STYLED SCREENSHOTS
-│   ├── 📝 PART-F — DOCUMENTATION
-│   ├── 📄 README
-│   └── 📄 LICENSE
-│
-└── 🟧 MICROSERVICE LAB
-    │
-    ├── 🍱 FOOD DELIVERY APPLICATION
-    │
-    ├── 👤 PART-A — USER SERVICE
-    │   ├── app.py
-    │   ├── Dockerfile
-    │   ├── requirements.txt
-    │   ├── Port: 8001
-    │   └── GET /users/1
-    │
-    ├── 🍽️ PART-B — RESTAURANT SERVICE
-    │   ├── app.py
-    │   ├── Dockerfile
-    │   ├── requirements.txt
-    │   ├── Port: 8002
-    │   └── GET /restaurants/1
-    │
-    ├── 📦 PART-C — ORDER SERVICE
-    │   ├── app.py
-    │   ├── Dockerfile
-    │   ├── requirements.txt
-    │   ├── Port: 8003
-    │   └── GET /orders/1
-    │
-    ├── 🔗 PART-D — INTER-SERVICE COMMUNICATION
-    │   ├── Client
-    │   ├── Order Service
-    │   ├── User Service
-    │   ├── Restaurant Service
-    │   └── Combined Response
-    │
-    ├── 🐙 PART-E — DOCKER COMPOSE
-    │   ├── docker-compose.yml
-    │   ├── Build
-    │   ├── Start
-    │   ├── Verify
-    │   └── Stop
-    │
-    ├── 🧪 PART-F — LOAD TESTING
-    │   ├── load_test.py
-    │   ├── 1 Concurrent
-    │   ├── 2 Concurrent
-    │   ├── 4 Concurrent
-    │   ├── 8 Concurrent
-    │   └── 16 Concurrent
-    │
-    ├── 📊 PART-G — PERFORMANCE RESULTS
-    │   ├── Response Time
-    │   ├── Throughput
-    │   ├── Successful Requests
-    │   ├── Failed Requests
-    │   └── Success Rate
-    │
-    ├── 💻 PART-H — CPU MONITORING
-    ├── 💾 PART-I — MEMORY MONITORING
-    │
-    ├── 📈 PART-J — PERFORMANCE GRAPHS
-    │   ├── Response Time vs Concurrency
-    │   └── Throughput vs Concurrency
-    │
-    ├── 🏆 PART-K — FINAL RESULTS
-    └── 📝 PART-L — COMPLETE DOCUMENTATION
-
-
-
-
-
-
-
-
-
-
-ANALYSIS
+🖥️ EXP-1
+Virtualization Performance
         ↓
-🚀 CLOUD-NATIVE COMPUTING
+🏆 Proxmox VE performed better
+        ↓
+🐳 EXP-2
+Docker Containerization
+        ↓
+🏆 Flask application successfully containerized
+        ↓
+🧩 MICROSERVICE LAB
+Distributed Application
+        ↓
+🏆 100% successful requests
+        ↓
+📈 153.54 req/s maximum throughput
