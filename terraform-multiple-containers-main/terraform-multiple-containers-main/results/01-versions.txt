@@ -1,0 +1,8 @@
+=== docker --version ===
+Docker version 29.9.3, build 5457199
+
+=== terraform --version ===
+Terraform v1.17.2
+on windows_amd64
+
+

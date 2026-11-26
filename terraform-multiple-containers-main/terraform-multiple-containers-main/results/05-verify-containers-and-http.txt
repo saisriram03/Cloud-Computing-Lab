@@ -1,0 +1,61 @@
+=== docker ps (Terraform-managed containers) ===
+NAMES              IMAGE          STATUS          PORTS
+terraform-nginx    b50897d5c7b1   Up 6 seconds    0.0.0.0:8080->80/tcp
+terraform-python   37fc60d303cb   Up 38 seconds   0.0.0.0:8081->8000/tcp
+
+=== docker images (nginx & python) ===
+
+REPOSITORY                                  TAG                        IMAGE ID       SIZE
+python                                      3.12-slim                  37fc60d303cb   179MB
+nginx                                       alpine                     b50897d5c7b1   103MB
+
+
+=== HTTP Check: http://localhost:8080 (Nginx Web Server) ===
+StatusCode: 200
+Response:
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, nginx is successfully installed and working.
+Further configuration is required for the web server, reverse proxy, 
+API gateway, load balancer, content cache, or other features.</p>
+
+<p>For online documentation and support please refer to
+<a href="https://nginx.org/">nginx.org</a>.<br/>
+To engage with the community please visit
+<a href="https://community.nginx.org/">community.nginx.org</a>.<br/>
+For enterprise grade support, professional services, additional 
+security features and capabilities please refer to
+<a href="https://f5.com/nginx">f5.com/nginx</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+
+=== HTTP Check: http://localhost:8081 (Python HTTP Server) ===
+StatusCode: 200
+Snippet:
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Directory listing for /</title>
+</head>
+<body>
+<h1>Directory listing for /</h1>
+<hr>
+<ul>
+<li><a href=".dockerenv">.dockerenv</a></li>
+<li><a href="bin/">bin@</a></li>
+<li><a href="boot/">boot/</a></li>
+<li><a href="dev/">dev/</a></li>
+<li><a href="etc/">etc/</a></li>
