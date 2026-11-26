@@ -1,0 +1,35 @@
+=== Pods in priority-demo (after deploying high-priority-critical-pod) ===
+NAME                                     STATUS    PRIORITY-CLASS       PRIORITY   NODE
+high-priority-critical-pod               Running   demo-high-priority   1000       desktop-control-plane
+low-priority-workload-79b49d9fb4-ml47t   Running   demo-low-priority    100        desktop-control-plane
+low-priority-workload-79b49d9fb4-t6v7d   Running   demo-low-priority    100        desktop-control-plane
+low-priority-workload-79b49d9fb4-v722g   Pending   demo-low-priority    100        <none>
+
+=== Kubernetes Events in priority-demo (sorted by timestamp) ===
+LAST SEEN   TYPE      REASON              OBJECT                                        MESSAGE
+13s         Normal    Pulled              pod/low-priority-workload-79b49d9fb4-ml47t    Container image "registry.k8s.io/pause:3.10" already present on machine and can be accessed by the pod
+13s         Normal    SuccessfulCreate    replicaset/low-priority-workload-79b49d9fb4   Created pod: low-priority-workload-79b49d9fb4-l86jf
+13s         Normal    ScalingReplicaSet   deployment/low-priority-workload              Scaled up replica set low-priority-workload-79b49d9fb4 from 0 to 3
+13s         Normal    SuccessfulCreate    replicaset/low-priority-workload-79b49d9fb4   Created pod: low-priority-workload-79b49d9fb4-t6v7d
+13s         Normal    Created             pod/low-priority-workload-79b49d9fb4-ml47t    Container created
+13s         Normal    Scheduled           pod/low-priority-workload-79b49d9fb4-l86jf    Successfully assigned priority-demo/low-priority-workload-79b49d9fb4-l86jf to desktop-control-plane
+13s         Normal    Pulled              pod/low-priority-workload-79b49d9fb4-l86jf    Container image "registry.k8s.io/pause:3.10" already present on machine and can be accessed by the pod
+13s         Normal    Created             pod/low-priority-workload-79b49d9fb4-l86jf    Container created
+13s         Normal    Started             pod/low-priority-workload-79b49d9fb4-l86jf    Container started
+13s         Normal    SuccessfulCreate    replicaset/low-priority-workload-79b49d9fb4   Created pod: low-priority-workload-79b49d9fb4-ml47t
+13s         Normal    Started             pod/low-priority-workload-79b49d9fb4-t6v7d    Container started
+13s         Normal    Scheduled           pod/low-priority-workload-79b49d9fb4-ml47t    Successfully assigned priority-demo/low-priority-workload-79b49d9fb4-ml47t to desktop-control-plane
+13s         Normal    Created             pod/low-priority-workload-79b49d9fb4-t6v7d    Container created
+13s         Normal    Started             pod/low-priority-workload-79b49d9fb4-ml47t    Container started
+13s         Normal    Pulled              pod/low-priority-workload-79b49d9fb4-t6v7d    Container image "registry.k8s.io/pause:3.10" already present on machine and can be accessed by the pod
+13s         Normal    Scheduled           pod/low-priority-workload-79b49d9fb4-t6v7d    Successfully assigned priority-demo/low-priority-workload-79b49d9fb4-t6v7d to desktop-control-plane
+1s          Warning   FailedScheduling    pod/high-priority-critical-pod                0/1 nodes are available: 1 Insufficient memory.
+1s          Normal    Killing             pod/low-priority-workload-79b49d9fb4-l86jf    Stopping container worker
+1s          Normal    Preempted           pod/low-priority-workload-79b49d9fb4-l86jf    Preempted by pod ec974bf3-a950-4e72-ae3f-e3eaa5611d1f on node desktop-control-plane
+1s          Normal    SuccessfulCreate    replicaset/low-priority-workload-79b49d9fb4   Created pod: low-priority-workload-79b49d9fb4-v722g
+0s          Normal    Scheduled           pod/high-priority-critical-pod                Successfully assigned priority-demo/high-priority-critical-pod to desktop-control-plane
+0s          Warning   FailedScheduling    pod/low-priority-workload-79b49d9fb4-v722g    0/1 nodes are available: 1 Insufficient memory. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Insufficient memory.
+0s          Normal    Started             pod/high-priority-critical-pod                Container started
+0s          Normal    Created             pod/high-priority-critical-pod                Container created
+0s          Normal    Pulled              pod/high-priority-critical-pod                Container image "registry.k8s.io/pause:3.10" already present on machine and can be accessed by the pod
+

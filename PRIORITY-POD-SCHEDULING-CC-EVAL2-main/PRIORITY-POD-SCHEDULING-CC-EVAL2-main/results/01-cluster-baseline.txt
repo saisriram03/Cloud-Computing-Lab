@@ -1,0 +1,33 @@
+=== kubectl get nodes -o wide ===
+NAME                    STATUS   ROLES           AGE    VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                       KERNEL-VERSION                              CONTAINER-RUNTIME
+desktop-control-plane   Ready    control-plane   5d9h   v1.36.1   172.22.0.2    <none>        Debian GNU/Linux 13 (trixie)   6.18.33.2-microsoft-standard-WSL2 (amd64)   containerd://2.3.1
+
+=== Node Capacity & Allocatable ===
+
+> Capacity:
+    cpu:                12
+    ephemeral-storage:  1055762868Ki
+    hugepages-1Gi:      0
+    hugepages-2Mi:      0
+    memory:             7979656Ki
+    pods:               110
+> Allocatable:
+    cpu:                12
+    ephemeral-storage:  1055762868Ki
+    hugepages-1Gi:      0
+    hugepages-2Mi:      0
+    memory:             7979656Ki
+    pods:               110
+  System Info:
+    Machine ID:                 396b3daacdbc4d07b28c76ad208812c3
+> Allocated resources:
+    (Total limits may be over 100 percent, i.e., overcommitted.)
+    Resource           Requests      Limits
+    --------           --------      ------
+    cpu                11950m (99%)  16100m (134%)
+    memory             802Mi (10%)   902Mi (11%)
+    ephemeral-storage  0 (0%)        0 (0%)
+    hugepages-1Gi      0 (0%)        0 (0%)
+    hugepages-2Mi      0 (0%)        0 (0%)
+
+

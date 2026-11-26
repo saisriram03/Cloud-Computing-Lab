@@ -1,0 +1,19 @@
+=== Pods in priority-demo (after deleting high-priority-critical-pod) ===
+NAME                                     STATUS    PRIORITY-CLASS                      PRIORITY   NODE
+high-priority-non-preempting-pod         Running   demo-high-priority-non-preempting   1000       desktop-control-plane
+low-priority-workload-79b49d9fb4-ml47t   Running   demo-low-priority                   100        desktop-control-plane
+low-priority-workload-79b49d9fb4-t6v7d   Running   demo-low-priority                   100        desktop-control-plane
+low-priority-workload-79b49d9fb4-v722g   Pending   demo-low-priority                   100        <none>
+
+=== Proof: high-priority-non-preempting-pod (1000) jumped ahead of low-priority-workload-v722g (100) ===
+31s         Normal    Scheduled           pod/high-priority-critical-pod                Successfully assigned priority-demo/high-priority-critical-pod to desktop-control-plane
+31s         Normal    Created             pod/high-priority-critical-pod                Container created
+31s         Normal    Started             pod/high-priority-critical-pod                Container started
+18s         Warning   FailedScheduling    pod/high-priority-non-preempting-pod          0/1 nodes are available: 1 Insufficient memory. no new claims to deallocate, preemption: not eligible due to preemptionPolicy=Never.
+1s          Normal    Killing             pod/high-priority-critical-pod                Stopping container critical-app
+0s          Normal    Created             pod/high-priority-non-preempting-pod          Container created
+0s          Warning   FailedScheduling    pod/low-priority-workload-79b49d9fb4-v722g    0/1 nodes are available: 1 Insufficient memory. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Insufficient memory.
+0s          Normal    Scheduled           pod/high-priority-non-preempting-pod          Successfully assigned priority-demo/high-priority-non-preempting-pod to desktop-control-plane
+0s          Normal    Pulled              pod/high-priority-non-preempting-pod          Container image "registry.k8s.io/pause:3.10" already present on machine and can be accessed by the pod
+0s          Normal    Started             pod/high-priority-non-preempting-pod          Container started
+

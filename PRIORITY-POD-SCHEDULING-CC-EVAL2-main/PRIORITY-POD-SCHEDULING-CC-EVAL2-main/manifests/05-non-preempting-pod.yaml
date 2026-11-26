@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: high-priority-non-preempting-pod
+  namespace: priority-demo
+  labels:
+    app: non-preempting-service
+    tier: critical-non-preempting
+spec:
+  priorityClassName: demo-high-priority-non-preempting
+  terminationGracePeriodSeconds: 5
+  containers:
+    - name: non-preempting-app
+      image: registry.k8s.io/pause:3.10
+      resources:
+        requests:
+          memory: "2Gi"
+        limits:
+          memory: "2Gi"

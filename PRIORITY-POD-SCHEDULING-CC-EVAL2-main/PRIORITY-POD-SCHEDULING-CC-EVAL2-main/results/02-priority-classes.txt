@@ -1,0 +1,10 @@
+NAME                                VALUE        GLOBAL-DEFAULT   AGE    PREEMPTIONPOLICY
+demo-high-priority                  1000         false            1s     PreemptLowerPriority
+demo-high-priority-non-preempting   1000         false            1s     Never
+demo-low-priority                   100          false            1s     PreemptLowerPriority
+demo-medium-priority                500          false            1s     PreemptLowerPriority
+high-priority                       100000       false            5d2h   PreemptLowerPriority
+low-priority                        1000         false            5d2h   PreemptLowerPriority
+medium-priority                     5000         false            5d2h   PreemptLowerPriority
+system-cluster-critical             2000000000   false            5d9h   PreemptLowerPriority
+system-node-critical                2000001000   false            5d9h   PreemptLowerPriority

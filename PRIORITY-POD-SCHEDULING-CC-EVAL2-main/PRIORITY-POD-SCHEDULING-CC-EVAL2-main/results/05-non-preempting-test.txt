@@ -1,0 +1,30 @@
+=== Pods in priority-demo (after deploying high-priority-non-preempting-pod) ===
+NAME                                     STATUS    PRIORITY-CLASS                      PRIORITY   NODE
+high-priority-critical-pod               Running   demo-high-priority                  1000       desktop-control-plane
+high-priority-non-preempting-pod         Pending   demo-high-priority-non-preempting   1000       <none>
+low-priority-workload-79b49d9fb4-ml47t   Running   demo-low-priority                   100        desktop-control-plane
+low-priority-workload-79b49d9fb4-t6v7d   Running   demo-low-priority                   100        desktop-control-plane
+low-priority-workload-79b49d9fb4-v722g   Pending   demo-low-priority                   100        <none>
+
+=== Events for high-priority-non-preempting-pod ===
+
+> Name:                 high-priority-non-preempting-pod
+> Namespace:            priority-demo
+> Priority:             1000
+> Priority Class Name:  demo-high-priority-non-preempting
+  Service Account:      default
+  Node:                 <none>
+  Labels:               app=non-preempting-service
+                        tier=critical-non-preempting
+  Annotations:          <none>
+  Status:               Pending
+  IP:                   
+  IPs:                  <none>
+  Containers:
+    non-preempting-app:
+> Events:
+    Type     Reason            Age   From               Message
+    ----     ------            ----  ----               -------
+    Warning  FailedScheduling  3s    default-scheduler  0/1 nodes are available: 1 Insufficient memory. no new claims to deallocate, preemption: not eligible due to preemptionPolicy=Never.
+
+

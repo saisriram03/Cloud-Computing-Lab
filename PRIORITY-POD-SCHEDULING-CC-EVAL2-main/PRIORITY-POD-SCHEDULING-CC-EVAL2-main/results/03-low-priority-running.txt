@@ -1,0 +1,18 @@
+=== Pods in priority-demo (after deploying low-priority workload) ===
+NAME                                     STATUS    PRIORITY-CLASS      PRIORITY   NODE
+low-priority-workload-79b49d9fb4-l86jf   Running   demo-low-priority   100        desktop-control-plane
+low-priority-workload-79b49d9fb4-ml47t   Running   demo-low-priority   100        desktop-control-plane
+low-priority-workload-79b49d9fb4-t6v7d   Running   demo-low-priority   100        desktop-control-plane
+
+=== Node Allocated Resources ===
+
+> Allocated resources:
+    (Total limits may be over 100 percent, i.e., overcommitted.)
+    Resource           Requests      Limits
+    --------           --------      ------
+    cpu                11950m (99%)  16100m (134%)
+    memory             6946Mi (89%)  7046Mi (90%)
+    ephemeral-storage  0 (0%)        0 (0%)
+    hugepages-1Gi      0 (0%)        0 (0%)
+
+
