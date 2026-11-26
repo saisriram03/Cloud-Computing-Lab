@@ -3,7 +3,7 @@
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00C6FF,25:0072FF,50:7B2FFF,75:FF00C8,100:FF6B00&height=220&section=header&text=CLOUD%20COMPUTING%20LAB&fontSize=46&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=VIRTUALIZATION%20%7C%20DOCKER%20%7C%20MICROSERVICES&descAlignY=58&descSize=18" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00C6FF,25:0072FF,50:7B2FFF,75:FF00C8,100:FF6B00&height=220&section=header&text=CLOUD%20COMPUTING%20LAB&fontSize=46&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=VIRTUALIZATION%20%7C%20DOCKER%20%7C%20KUBERNETES%20%7C%20MICROSERVICES&descAlignY=58&descSize=16" width="100%"/>
 
 ### 👨‍💻 **SAI SRI RAM**
 
@@ -18,6 +18,8 @@
 ![Python](https://img.shields.io/badge/🐍_Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/🌶️_Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/⚡_FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/☸️_Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Terraform](https://img.shields.io/badge/🏗️_Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
 ![Microservices](https://img.shields.io/badge/🧩_Microservices-FF00C8?style=for-the-badge)
 
 </div>
@@ -26,40 +28,13 @@
 
 # 🌌 CLOUD COMPUTING LAB
 
-> ### ☁️ A complete practical journey from **Virtualization → Containerization → Microservices → Performance Analysis**
+> ### ☁️ A complete practical journey from **Virtualization → Containerization → Microservices → Kubernetes → Edge Computing → Infrastructure Automation**
 
-This repository contains the complete practical work of the **Cloud Computing Laboratory**.
+This repository contains the practical implementations, experiments, evaluations, and projects completed as part of the **Cloud Computing Laboratory**.
 
-The experiments explore cloud infrastructure, virtualization technologies, Docker containerization, distributed application architecture, and performance evaluation.
+The repository explores modern cloud computing concepts through hands-on implementations involving virtualization, Docker, distributed systems, Kubernetes orchestration, edge computing, microservices, and Terraform-based infrastructure automation.
 
-The practical implementations are organized into two major sections:
-
-```text
-☁️ CLOUD COMPUTING LAB
-        |
-        |
-        ├── 🖥️ EXP-1
-        |      |
-        |      ├── Virtualization Performance
-        |      |
-        |      └── 🏆 Proxmox VE performed better
-        |
-        ├── 🐳 DOCKER
-        |      |
-        |      ├── Containerization
-        |      |
-        |      └── 🏆 Flask application successfully containerized
-        |
-        └── 🧩 MICROSERVICE LAB
-               |
-               ├── Distributed Application
-               |
-               ├── Performance Testing
-               |
-               └── 🏆 100% successful requests
-                       |
-                       └── 📈 153.54 req/s maximum throughput
-```
+The work is organized into **7 major experiments and projects**.
 
 ---
 
@@ -69,13 +44,25 @@ The practical implementations are organized into two major sections:
 Cloud-Computing-Lab/
 │
 ├── EXP-1/
-│   ├── Virtualization Performance
+│   └── Virtualization Performance
+│
+├── EXPERIMENT 2/
 │   └── Docker Containerization
 │
-├── Microservice_Lab/
-│   ├── Distributed Application
-│   ├── Microservice Implementation
-│   └── Performance Analysis
+├── Eval 1/
+│   └── Microservice_Lab/
+│
+├── PRIORITY-POD-SCHEDULING-CC-EVAL2-main/
+│   └── Kubernetes Priority-Based Pod Scheduling
+│
+├── edge-vs-cloud-k8s-main/
+│   └── Edge vs Cloud Computing using Kubernetes
+│
+├── microservice-project-main/
+│   └── Microservices Project
+│
+├── terraform-multiple-containers-main/
+│   └── Terraform Multiple Container Deployment
 │
 └── README.md
 ```
@@ -90,25 +77,23 @@ To understand virtualization technologies and evaluate the performance of differ
 
 ## 🔍 Overview
 
-Virtualization allows multiple virtual machines to operate on a single physical system by sharing its hardware resources.
+Virtualization allows multiple virtual machines to operate on a single physical system by sharing hardware resources.
 
-This experiment focuses on understanding and comparing virtualization performance using different virtualization environments.
+This experiment focuses on understanding and comparing virtualization platforms based on their resource utilization and performance.
 
 ## 🧪 Key Concepts
 
 - Virtual Machines (VMs)
 - Hypervisors
 - CPU Virtualization
-- Memory Allocation
-- Resource Management
+- Memory Management
+- Resource Allocation
 - Virtual Machine Performance
 - Infrastructure Virtualization
 
 ## 🏆 Performance Observation
 
 **Proxmox VE performed better** in the conducted performance comparison.
-
-The experiment helped understand how virtualization platforms manage physical hardware resources and execute virtual workloads.
 
 ---
 
@@ -122,7 +107,7 @@ To understand containerization and deploy a Flask application using Docker.
 
 Docker is a containerization platform that packages applications and their dependencies into lightweight, portable containers.
 
-Unlike traditional virtual machines, containers share the host operating system kernel, making them lightweight and efficient.
+Containers provide application isolation and simplify deployment across different environments.
 
 ## ⚙️ Technologies Used
 
@@ -141,7 +126,7 @@ Unlike traditional virtual machines, containers share the host operating system 
        🐍 FLASK APPLICATION
                 |
                 ↓
-          DOCKERFILE
+            DOCKERFILE
                 |
                 ↓
         BUILD DOCKER IMAGE
@@ -153,88 +138,277 @@ Unlike traditional virtual machines, containers share the host operating system 
         RUN FLASK APPLICATION
                 |
                 ↓
-       🌐 ACCESS APPLICATION
+        🌐 ACCESS APPLICATION
 ```
 
 ## 🏆 Result
 
 The Flask application was successfully containerized and executed using Docker.
 
-This experiment demonstrated application portability, dependency isolation, and simplified deployment.
-
 ---
 
-# 🧩 MICROSERVICE LAB — DISTRIBUTED APPLICATION
+# 🧩 EXPERIMENT 3 — MICROSERVICE LAB
 
 ## 🎯 Objective
 
-To understand and implement a distributed application using the microservices architecture and evaluate its performance.
+To understand and implement a distributed application using microservices architecture and evaluate its performance.
 
 ## 🔍 Overview
 
-Microservices architecture is an approach to software development where an application is divided into smaller, independent services.
+Microservices architecture divides an application into smaller, independent services. Each service handles a specific responsibility and communicates with other services through APIs.
 
-Each service handles a specific responsibility and communicates with other services through well-defined interfaces.
-
-Unlike monolithic architecture, microservices allow individual components to be developed, deployed, and maintained independently.
-
-## ⚙️ Key Concepts
+## 🧪 Key Concepts
 
 - Microservices Architecture
 - Distributed Systems
-- Service Communication
-- Independent Service Deployment
 - API Communication
+- Service Independence
 - Scalability
 - Fault Isolation
-- Performance Evaluation
+- Performance Testing
 
-## 🔄 Architecture Workflow
+## 📈 Performance Results
+
+| Metric | Observed Result |
+|---|---:|
+| Successful Requests | 100% |
+| Maximum Throughput | 153.54 req/s |
+
+## 🏆 Result
+
+The distributed application successfully handled the tested requests, achieving 100% successful requests and a maximum recorded throughput of 153.54 requests per second.
+
+---
+
+# ☸️ EXPERIMENT 4 — PRIORITY-BASED POD SCHEDULING
+
+## 🎯 Objective
+
+To implement priority-based pod scheduling in Kubernetes and understand how Kubernetes schedules workloads based on their priority.
+
+## 🔍 Overview
+
+Kubernetes is a container orchestration platform that automates container deployment, scaling, and management.
+
+Priority-based scheduling allows important workloads to receive scheduling preference over lower-priority workloads.
+
+## 🧪 Key Concepts
+
+- Kubernetes Architecture
+- Pods and Nodes
+- Priority Classes
+- Pod Scheduling
+- Preemption
+- Resource Allocation
+- Container Orchestration
+
+## ⚙️ Technologies Used
+
+- Kubernetes
+- Minikube
+- Docker
+- kubectl
+- YAML Configuration
+
+## 🔄 Implementation Workflow
 
 ```text
-              👤 CLIENT
+          KUBERNETES CLUSTER
                   |
                   ↓
-            🌐 REQUEST
-                  |
-                  ↓
-          🧩 DISTRIBUTED SYSTEM
+          CREATE PRIORITY CLASSES
                   |
           ┌───────┼───────┐
           ↓       ↓       ↓
-       SERVICE  SERVICE  SERVICE
-          1       2       3
+         LOW    MEDIUM   HIGH
+       PRIORITY PRIORITY PRIORITY
           |       |       |
           └───────┼───────┘
                   |
                   ↓
-            RESPONSE
+           KUBERNETES SCHEDULER
                   |
                   ↓
-             👤 CLIENT
+          PRIORITY-BASED SCHEDULING
+                  |
+                  ↓
+            POD DEPLOYMENT
 ```
 
-## 📈 PERFORMANCE ANALYSIS
+## 🏆 Result
 
-Performance testing was conducted to evaluate the behavior of the distributed application under requests.
+Implemented Kubernetes PriorityClasses and tested pod scheduling behavior using different priority levels.
 
-### 🏆 Experimental Results
+---
 
-| Performance Metric | Observed Result |
-|---|---:|
-| Successful Requests | 100% |
-| Maximum Throughput | 153.54 req/s |
-| Architecture | Microservices |
-| Application Type | Distributed Application |
+# 🌐 EXPERIMENT 5 — EDGE VS CLOUD COMPUTING USING KUBERNETES
 
-### 📊 Key Observations
+## 🎯 Objective
 
-- Successfully handled the tested requests.
-- Achieved 100% successful requests during the recorded test.
-- Recorded a maximum throughput of 153.54 requests per second.
-- Demonstrated the performance characteristics of a distributed application.
+To understand and implement edge and cloud computing environments using Kubernetes.
 
-> **Note:** These are the observed results from the conducted experiment, not guaranteed production performance.
+## 🔍 Overview
+
+Edge computing processes data closer to its source, reducing latency and network dependency.
+
+Cloud computing provides centralized infrastructure with scalable computing and storage resources.
+
+This project explores how Kubernetes can be used to manage workloads across edge and cloud environments.
+
+## 🧪 Key Concepts
+
+- Edge Computing
+- Cloud Computing
+- Kubernetes
+- Distributed Infrastructure
+- Workload Deployment
+- Node Management
+- Resource Allocation
+- Container Orchestration
+
+## 🔄 Architecture
+
+```text
+             APPLICATION REQUEST
+                     |
+                     ↓
+              KUBERNETES
+                     |
+             ┌───────┴───────┐
+             ↓               ↓
+        EDGE NODE         CLOUD NODE
+             |               |
+       LOW-LATENCY       CENTRALIZED
+       PROCESSING        PROCESSING
+             |               |
+             └───────┬───────┘
+                     |
+                     ↓
+               APPLICATION
+                 RESPONSE
+```
+
+## 🏆 Result
+
+Explored Kubernetes-based edge and cloud workload deployment and the differences between edge and centralized cloud processing.
+
+---
+
+# 🧩 EXPERIMENT 6 — MICROSERVICES PROJECT
+
+## 🎯 Objective
+
+To develop and understand an application using microservices architecture.
+
+## 🔍 Overview
+
+A microservices-based application separates its functionality into independent services that communicate through APIs.
+
+Each service can be developed, tested, maintained, and deployed independently.
+
+## 🧪 Key Concepts
+
+- Microservices Architecture
+- Service Communication
+- REST APIs
+- Independent Deployment
+- Distributed Applications
+- Scalability
+- Service Management
+
+## 🔄 Architecture Workflow
+
+```text
+                👤 CLIENT
+                    |
+                    ↓
+              API REQUEST
+                    |
+                    ↓
+             APPLICATION
+                    |
+          ┌─────────┼─────────┐
+          ↓         ↓         ↓
+       SERVICE   SERVICE   SERVICE
+          1         2         3
+          |         |         |
+          └─────────┼─────────┘
+                    |
+                    ↓
+              API RESPONSE
+                    |
+                    ↓
+                👤 CLIENT
+```
+
+## 🏆 Result
+
+Explored the development and organization of applications using independent microservices and distributed communication.
+
+---
+
+# 🏗️ EXPERIMENT 7 — TERRAFORM MULTIPLE CONTAINERS
+
+## 🎯 Objective
+
+To understand Infrastructure as Code (IaC) and automate the creation and management of multiple containers using Terraform.
+
+## 🔍 Overview
+
+Terraform is an Infrastructure as Code tool that allows infrastructure resources to be defined, configured, and managed using declarative configuration files.
+
+It simplifies infrastructure provisioning and makes deployments repeatable.
+
+## 🧪 Key Concepts
+
+- Infrastructure as Code (IaC)
+- Terraform
+- Container Management
+- Infrastructure Provisioning
+- Declarative Configuration
+- Resource Management
+- Automated Deployment
+
+## ⚙️ Technologies Used
+
+- Terraform
+- Docker
+- Container Images
+- HCL Configuration Language
+
+## 🔄 Implementation Workflow
+
+```text
+           TERRAFORM CONFIGURATION
+                     |
+                     ↓
+               TERRAFORM INIT
+                     |
+                     ↓
+               TERRAFORM PLAN
+                     |
+                     ↓
+              TERRAFORM APPLY
+                     |
+                     ↓
+              DOCKER PROVIDER
+                     |
+             ┌───────┼───────┐
+             ↓       ↓       ↓
+         CONTAINER CONTAINER CONTAINER
+             1       2       3
+             |       |       |
+             └───────┼───────┘
+                     |
+                     ↓
+           MULTIPLE CONTAINERS
+               SUCCESSFULLY
+                PROVISIONED
+```
+
+## 🏆 Result
+
+Explored Terraform-based infrastructure provisioning and the automated management of multiple Docker containers.
 
 ---
 
@@ -246,6 +420,8 @@ Performance testing was conducted to evaluate the behavior of the distributed ap
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
 ![Proxmox](https://img.shields.io/badge/Proxmox-E57000?style=for-the-badge&logo=proxmox&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
@@ -253,104 +429,52 @@ Performance testing was conducted to evaluate the behavior of the distributed ap
 
 </div>
 
-| Technology | Application |
-|---|---|
-| Proxmox VE | Virtualization |
-| Docker | Containerization |
-| Python | Backend Development |
-| Flask | Web Application |
-| FastAPI | API Development |
-| Linux | Operating Environment |
-| Git & GitHub | Version Control |
-
 ---
 
 # 🎓 LEARNING OUTCOMES
 
-Through these practical implementations, the following concepts were explored:
+Through these experiments and projects, the following concepts were explored:
 
 1. Understanding virtualization and hypervisor technologies.
 2. Comparing virtualization environments based on performance.
-3. Understanding Docker images and containers.
-4. Containerizing and executing Flask applications.
-5. Understanding monolithic and microservices architectures.
-6. Exploring distributed application communication.
-7. Evaluating application performance using throughput and success rate.
-8. Understanding scalability, resource utilization, and deployment.
+3. Containerizing applications using Docker.
+4. Deploying Flask applications inside containers.
+5. Understanding distributed systems and microservices.
+6. Implementing priority-based pod scheduling in Kubernetes.
+7. Exploring edge and cloud computing environments.
+8. Understanding container orchestration and workload management.
+9. Developing applications using microservices architecture.
+10. Automating infrastructure provisioning using Terraform.
+11. Understanding scalability, resource allocation, and deployment.
 
 ---
 
-# 📊 PROJECT HIGHLIGHTS
+# 📊 CLOUD COMPUTING JOURNEY
 
 <div align="center">
 
-<table>
-<tr>
-<td align="center" width="33%">
-
-### 🖥️
-**VIRTUALIZATION**
-
-Proxmox VE
-
-</td>
-<td align="center" width="33%">
-
-### 🐳
-**CONTAINERIZATION**
-
-Docker + Flask
-
-</td>
-<td align="center" width="33%">
-
-### 🧩
-**MICROSERVICES**
-
-Distributed System
-
-</td>
-</tr>
-<tr>
-<td align="center">
-
-**Performance Comparison**
-
-</td>
-<td align="center">
-
-**Successful Deployment**
-
-</td>
-<td align="center">
-
-**153.54 req/s**
-
-</td>
-</tr>
-</table>
+| # | Practical Area | Technology |
+|:---:|---|---|
+| 01 | Virtualization Performance | Proxmox VE |
+| 02 | Containerization | Docker |
+| 03 | Distributed Microservices | Python / Flask / FastAPI |
+| 04 | Priority-Based Scheduling | Kubernetes |
+| 05 | Edge vs Cloud Computing | Kubernetes |
+| 06 | Microservices Project | Microservices |
+| 07 | Infrastructure Automation | Terraform |
 
 </div>
 
 ---
 
-# 📁 EXPERIMENT NAVIGATION
-
-| Section | Description | Repository |
-|---|---|---|
-| EXP-1 | Virtualization and Docker practicals | [View EXP-1](./EXP-1/) |
-| Microservice Lab | Distributed application and performance analysis | [View Microservice Lab](./Microservice_Lab/) |
-
----
-
 # 👨‍💻 ABOUT ME
 
-**Sai Sri Ram**
+### **SAI SRI RAM**
 
-B.Tech — Computer Science (Artificial Intelligence)  
-KLE Technological University, Hubballi
+**B.Tech — Computer Science (Artificial Intelligence)**  
+**KLE Technological University, Hubballi**
 
-Interested in Cloud Computing, Artificial Intelligence, Distributed Systems, Backend Development, and Emerging Technologies.
+Interested in Cloud Computing, Artificial Intelligence, Distributed Systems, Backend Development, Kubernetes, and Emerging Technologies.
 
 <div align="center">
 
