@@ -1,0 +1,9 @@
+=== kind version ===
+kind v0.33.0 go1.26.7 windows/amd64
+
+=== kubectl get nodes -o wide ===
+NAME                              STATUS   ROLES           AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                       KERNEL-VERSION                              CONTAINER-RUNTIME
+microservices-lab-control-plane   Ready    control-plane   25s   v1.37.0   172.22.0.7    <none>        Debian GNU/Linux 13 (trixie)   6.18.33.2-microsoft-standard-WSL2 (amd64)   containerd://2.3.4
+microservices-lab-worker          Ready    <none>          14s   v1.37.0   172.22.0.5    <none>        Debian GNU/Linux 13 (trixie)   6.18.33.2-microsoft-standard-WSL2 (amd64)   containerd://2.3.4
+microservices-lab-worker2         Ready    <none>          14s   v1.37.0   172.22.0.6    <none>        Debian GNU/Linux 13 (trixie)   6.18.33.2-microsoft-standard-WSL2 (amd64)   containerd://2.3.4
+

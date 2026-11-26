@@ -1,0 +1,29 @@
+=== Final Verification ===
+--- Nodes ---
+NAME                              STATUS   ROLES           AGE   VERSION
+microservices-lab-control-plane   Ready    control-plane   55s   v1.37.0
+microservices-lab-worker          Ready    <none>          44s   v1.37.0
+microservices-lab-worker2         Ready    <none>          44s   v1.37.0
+
+--- Deployments ---
+NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+catalog-deployment    3/3     3            3           9s
+frontend-deployment   1/1     1            1           9s
+
+--- Pods (-o wide) ---
+NAME                                   READY   STATUS    RESTARTS   AGE   IP           NODE                        NOMINATED NODE   READINESS GATES
+catalog-deployment-69974d8df6-79swm    1/1     Running   0          7s    10.244.2.3   microservices-lab-worker2   <none>           <none>
+catalog-deployment-69974d8df6-k9ggc    1/1     Running   0          7s    10.244.1.3   microservices-lab-worker    <none>           <none>
+catalog-deployment-69974d8df6-w9rnp    1/1     Running   0          9s    10.244.2.2   microservices-lab-worker2   <none>           <none>
+frontend-deployment-5968499479-xh9ds   1/1     Running   0          9s    10.244.1.2   microservices-lab-worker    <none>           <none>
+
+--- Services ---
+NAME               TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+catalog-service    ClusterIP   10.96.223.200   <none>        5000/TCP   9s
+frontend-service   ClusterIP   10.96.180.108   <none>        80/TCP     9s
+kubernetes         ClusterIP   10.96.0.1       <none>        443/TCP    54s
+
+--- EndpointSlices ---
+NAME                    ADDRESSTYPE   PORTS   ENDPOINTS                          AGE
+catalog-service-kgchn   IPv4          5000    10.244.2.2,10.244.1.3,10.244.2.3   9s
+

@@ -1,0 +1,13 @@
+=== Scaled Backend Pods (replicas=3) ===
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE                        NOMINATED NODE   READINESS GATES
+catalog-deployment-69974d8df6-79swm   1/1     Running   0          1s    10.244.2.3   microservices-lab-worker2   <none>           <none>
+catalog-deployment-69974d8df6-k9ggc   1/1     Running   0          1s    10.244.1.3   microservices-lab-worker    <none>           <none>
+catalog-deployment-69974d8df6-w9rnp   1/1     Running   0          3s    10.244.2.2   microservices-lab-worker2   <none>           <none>
+
+=== EndpointSlices for catalog-service ===
+NAME                    ADDRESSTYPE   PORTS   ENDPOINTS                          AGE
+catalog-service-kgchn   IPv4          5000    10.244.2.2,10.244.1.3,10.244.2.3   3s
+
+=== 12 Fresh Requests to http://catalog-service:5000/products (Load Balancing Proof) ===
+Req 01: {'products': ['Laptop', 'Mobile', 'Keyboard'], 'served_by': 'catalog-deployment-69974d8df6-w9rnp'}
+

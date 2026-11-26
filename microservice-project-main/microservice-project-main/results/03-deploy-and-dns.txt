@@ -1,0 +1,21 @@
+=== kubectl get deployments ===
+NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+catalog-deployment    1/1     1            1           1s
+frontend-deployment   1/1     1            1           1s
+
+=== kubectl get pods -o wide ===
+NAME                                   READY   STATUS    RESTARTS   AGE   IP           NODE                        NOMINATED NODE   READINESS GATES
+catalog-deployment-69974d8df6-w9rnp    1/1     Running   0          1s    10.244.2.2   microservices-lab-worker2   <none>           <none>
+frontend-deployment-5968499479-xh9ds   1/1     Running   0          1s    10.244.1.2   microservices-lab-worker    <none>           <none>
+
+=== kubectl get services ===
+NAME               TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+catalog-service    ClusterIP   10.96.223.200   <none>        5000/TCP   2s
+frontend-service   ClusterIP   10.96.180.108   <none>        80/TCP     2s
+kubernetes         ClusterIP   10.96.0.1       <none>        443/TCP    47s
+
+=== Kubernetes DNS Proof (from frontend-deployment) ===
+catalog-service resolved to ClusterIP: 10.96.223.200
+
+=== Frontend -> Backend Live Call (http://127.0.0.1:5000/products) ===
+{"products":["Laptop","Mobile","Keyboard"],"served_by":"catalog-deployment-69974d8df6-w9rnp"} 

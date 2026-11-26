@@ -1,0 +1,23 @@
+=== Backend Pod (catalog-deployment-69974d8df6-79swm) Resource Requests & Limits ===
+
+>     Limits:
+        cpu:     500m
+        memory:  256Mi
+>     Requests:
+        cpu:        100m
+        memory:     128Mi
+      Environment:  <none>
+
+
+=== Unschedulable Test Pod (100 CPU, 100Gi Memory) ===
+NAME            READY   STATUS    RESTARTS   AGE
+resource-test   0/1     Pending   0          5s
+
+=== Scheduler Events for resource-test ===
+
+> Events:
+    Type     Reason            Age   From               Message
+    ----     ------            ----  ----               -------
+    Warning  FailedScheduling  5s    default-scheduler  0/3 nodes are available: 1 node(s) had untolerated taint(s), 2 Insufficient cpu, 2 Insufficient memory. preemption: 0/3 nodes are available: 3 Preemption is not helpful for scheduling.
+
+

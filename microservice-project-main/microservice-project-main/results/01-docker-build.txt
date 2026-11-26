@@ -1,0 +1,7 @@
+=== Built Microservice Images ===
+
+REPOSITORY                                  TAG                        IMAGE ID       SIZE
+frontend                                    v1                         f4e94151a28f   216MB
+catalog                                     v1                         a71514815c30   211MB
+
+
