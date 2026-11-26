@@ -1,0 +1,4 @@
+NAME                       STATUS     ROLES           AGE   VERSION   NODE-TYPE
+edge-cloud-control-plane   NotReady   control-plane   13s   v1.37.0   
+edge-cloud-worker          NotReady   <none>          2s    v1.37.0   edge
+edge-cloud-worker2         NotReady   <none>          2s    v1.37.0   cloud

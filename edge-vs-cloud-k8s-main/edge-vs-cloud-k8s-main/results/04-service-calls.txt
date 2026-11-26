@@ -1,0 +1,5 @@
+=== Calling http://edge-service and http://cloud-service from inside the cluster ===
+Hello from the EDGE microservice
+Hello from the CLOUD microservice
+pod "curl-test" deleted from default namespace
+

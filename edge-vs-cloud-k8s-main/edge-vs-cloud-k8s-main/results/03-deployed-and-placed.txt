@@ -1,0 +1,11 @@
+=== kubectl get pods -o wide ===
+NAME                                READY   STATUS    RESTARTS   AGE   IP           NODE                 NOMINATED NODE   READINESS GATES
+cloud-deployment-745d44b97c-gzpp2   1/1     Running   0          21s   10.244.2.2   edge-cloud-worker2   <none>           <none>
+edge-deployment-75494b79b5-xsvgp    1/1     Running   0          21s   10.244.1.2   edge-cloud-worker    <none>           <none>
+
+=== kubectl get services ===
+NAME            TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+cloud-service   ClusterIP   10.96.34.49     <none>        80/TCP    21s
+edge-service    ClusterIP   10.96.101.104   <none>        80/TCP    22s
+kubernetes      ClusterIP   10.96.0.1       <none>        443/TCP   34s
+

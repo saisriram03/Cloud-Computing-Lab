@@ -1,0 +1,18 @@
+=== After removing node-type=edge label and deleting edge pod ===
+NAME                                READY   STATUS    RESTARTS   AGE   IP           NODE                 NOMINATED NODE   READINESS GATES
+cloud-deployment-745d44b97c-gzpp2   1/1     Running   0          39s   10.244.2.2   edge-cloud-worker2   <none>           <none>
+edge-deployment-75494b79b5-mcc72    0/1     Pending   0          5s    <none>       <none>               <none>           <none>
+
+=== Scheduler Events (nodeSelector strict enforcement) ===
+
+> Events:
+    Type     Reason            Age   From               Message
+    ----     ------            ----  ----               -------
+    Warning  FailedScheduling  5s    default-scheduler  0/3 nodes are available: 1 node(s) had untolerated taint(s), 2 node(s) didn't match Pod's node affinity/selector. preemption: 0/3 nodes are available: 3 Preemption is not helpful for scheduling.
+
+
+=== After restoring node-type=edge label ===
+NAME                                READY   STATUS    RESTARTS   AGE   IP           NODE                 NOMINATED NODE   READINESS GATES
+cloud-deployment-745d44b97c-gzpp2   1/1     Running   0          41s   10.244.2.2   edge-cloud-worker2   <none>           <none>
+edge-deployment-75494b79b5-mcc72    1/1     Running   0          7s    10.244.1.3   edge-cloud-worker    <none>           <none>
+
